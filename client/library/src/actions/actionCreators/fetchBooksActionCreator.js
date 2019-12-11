@@ -22,7 +22,7 @@ export function fetch_books_failure(error) {
 }
 
 export const fetchBooks = () => dispatch => {
-    dispatch(fetch_books)
+    dispatch(fetch_books())
     axios.get('https://hoxtygen-library.herokuapp.com/api/v1/books')
         .then(res => {
             dispatch(fetch_books_success(res.data))
