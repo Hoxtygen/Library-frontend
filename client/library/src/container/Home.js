@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux';
 import BookList from '../component/BookList'
 import { fetchBooks } from '../actions/actionCreators/fetchBooksActionCreator';
+import Loaders from '../component/Loader';
 
 class Home extends Component {
     componentDidMount() {
@@ -9,9 +10,9 @@ class Home extends Component {
     }
     render() {
         const books = this.props.allBooks.data || [];
-        console.log(books);
         if (this.props.loading) {
-            return <h1>Loading</h1>
+            console.log('loading....');
+            return <Loaders />
         }
         return this.props.error ? (<p>{this.props.error}</p>) :
         (
