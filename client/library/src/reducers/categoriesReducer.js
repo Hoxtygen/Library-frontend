@@ -10,7 +10,7 @@ const initialState = {
 
 export const categoriesReducer = (state = initialState, action) => {
     let error;
-    switch (key) {
+    switch (action.type) {
         case (types.FETCH_CATEGORIES):
             return {
                 ...state,
@@ -38,7 +38,7 @@ export const categoriesReducer = (state = initialState, action) => {
                 categoriesList: {
                     allCategories: [],
                     loading: false,
-                    errro: error
+                    error: error
                 }
             }
     
