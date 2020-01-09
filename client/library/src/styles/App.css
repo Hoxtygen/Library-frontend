@@ -15,10 +15,6 @@ body {
 }
 
 .App {
-  /* display: grid;
-  grid-template-columns: 250px minmax(400px, 3fr);
-  grid-template-rows: 100vh; */
-  /* gap: 10px; */
   position: relative;
   display: flex;
   min-height: 100vh;
@@ -131,20 +127,18 @@ aside .category-container   {
 } */
 
 main {
-  border: 1px solid red;
   width: 85%;
   position: relative;
 }
 
 header {
-  background: mediumaquamarine;
+  background: #222;
   width: 100%;
-  border: 1px solid magenta;
   height: 50px;
 }
 
 .header-inner {
-  background-color: orange;
+  background-color: #222;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,17 +148,43 @@ header {
 }
 
 .main-container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
-.leftbox img {
+.rightbox img {
   border-radius: 50%;
 }
 
-.leftbox {
-  border: 1px solid blue;
+.rightbox {
   display: flex;
   align-items: center;
+  width: 6%;
+  justify-content: space-between;
+}
+
+.rightbox .arrDown  {
+  color: #fff;
+}
+
+.leftbox   {
+  width: 30%;
+}
+
+.leftbox input  {
+  /* border: 1px solid #ccc; */
+  width: 70%;
+  border-radius: 2px;
+  height: 35px;
+  padding: 10px;
+  outline: none;
+  border: 0;
+}
+
+input  {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .books-container {

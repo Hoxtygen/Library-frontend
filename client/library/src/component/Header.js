@@ -7,18 +7,18 @@ export default function Header() {
         <Fragment>
         <header>
             <div className="header-inner">
-                <div className="rightbox">
-                <FontAwesomeIcon icon={faSearch} />
+                <div className="leftbox">
+                    {/* <FontAwesomeIcon icon={faSearch} /> */}
                     <input 
                     type="search" 
                     name="" 
                     id="" 
-                    placeholder = "Search text here"
+                    placeholder = "Search..."
                     />
                 </div>
-                <div className="leftbox">
+                <div className="rightbox">
                     <img src="https://via.placeholder.com/50" alt="user pix"/>
-                    <FontAwesomeIcon icon={faCaretDown} />
+                    <FontAwesomeIcon icon={faCaretDown} className = "arrDown" />
                 </div>
             </div>
         </header>
