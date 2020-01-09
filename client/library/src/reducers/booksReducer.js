@@ -32,7 +32,7 @@ export const booksReducer = (state = initialState, action)=> {
                 }
             }
 
-        case (types.FETCH_SINGLE_BOOK_FAILURE):
+        case (types.FETCH_BOOKS_FAILURE):
             error = action.payload || { message: action.payload.message };
             return {
                 ...state,
