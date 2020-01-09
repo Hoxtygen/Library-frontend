@@ -8,9 +8,11 @@ import logger from "redux-logger";
 import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import { Provider } from "react-redux";
 import { booksReducer } from './reducers/booksReducer';
+import { categoriesReducer } from './reducers/categoriesReducer'
 
 const combinedReducer = combineReducers({
-  booksReducer
+  booksReducer,
+  categoriesReducer
 });
 
 const store = createStore(
