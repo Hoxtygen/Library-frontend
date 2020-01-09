@@ -11,7 +11,6 @@ class Home extends Component {
     render() {
         const books = this.props.allBooks.data || [];
         if (this.props.loading) {
-            console.log('loading....');
             return <Loaders />
         }
         return this.props.error ? (<p>{this.props.error}</p>) :
@@ -29,7 +28,7 @@ function mapStateToProps(state){
    return {
     allBooks: state.booksReducer.bookList.allBooks,
     loading: state.booksReducer.bookList.loading,
-    error: state.booksReducer.bookList.loading
+    error: state.booksReducer.bookList.error
    }
 }
 
