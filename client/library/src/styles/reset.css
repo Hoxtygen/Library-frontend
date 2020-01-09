@@ -48,4 +48,5 @@ table {
 
 :root 	{
 	font-size: 70%;
+	box-sizing: border-box;
 }
