@@ -1,26 +1,29 @@
-import React from 'react'
+import React, { Fragment} from 'react'
+import SingleBook from './SingleBook';
+
 
 const BookList = props => {
         return (
-            <main>
+            <Fragment>
+                <div className="main-container">
                 <section className="books-title">
-                    <h1>Books</h1>
+                    <h1>All Books</h1>
                 </section>
 
                 <section className="books-container">
-                <ul>
-
                     {
                         props.books.map(book => {
-                            return (
-                                <li key = {book.book_id}>{book.title}</li>
-                            )
+                            return <SingleBook
+                                image = {book.image_url}
+                                title = {book.title}
+                                author = {book.author_name}
+                                key = {book.book_id}
+                            />
                         })
                     }
-
-                </ul>
                 </section>
-            </main>
+                </div>
+            </Fragment>
         )
 }
 
