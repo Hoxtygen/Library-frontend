@@ -1,36 +1,28 @@
-import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux';
+import React, { Fragment, useEffect } from 'react';
+import { useSelector, useDispatch } from "react-redux";
 import BookList from '../component/BookList'
 import { fetchBooks } from '../actions/actionCreators/fetchBooksActionCreator';
 import Loaders from '../component/Loader';
 
-class Home extends Component {
-    componentDidMount() {
-        this.props.fetchBooks()
+
+const Home = () => {
+    const books = useSelector(state => state.booksReducer.bookList) || [];
+    const dispatch = useDispatch();
+    const storedBooks = books.allBooks.data || [];
+
+    useEffect(() => {
+        dispatch(fetchBooks())
+    }, [dispatch]);
+
+    if (books.loading) {
+        return <Loaders />
     }
-    render() {
-        const books = this.props.allBooks.data || [];
-        if (this.props.loading) {
-            return <Loaders />
-        }
-        return this.props.error ? (<p>{this.props.error}</p>) :
-        (
-            <Fragment>
-                <BookList books = {books} />
-            </Fragment>
-        )
-    }
+
+    return books.error ? (<p>{books.error}</p>) : (
+        <Fragment>
+            <BookList books = {storedBooks} />
+        </Fragment>
+    )
 }
 
-
-
-function mapStateToProps(state){
-   return {
-    allBooks: state.booksReducer.bookList.allBooks,
-    loading: state.booksReducer.bookList.loading,
-    error: state.booksReducer.bookList.error
-   }
-}
-
-
-export default connect(mapStateToProps, { fetchBooks })(Home)
+export default Home;
