@@ -12,11 +12,12 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1;
 }
 
 .App {
   position: relative;
-  display: flex;
+  /* display: flex; */
   min-height: 100vh;
 }
 
@@ -25,10 +26,11 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6
+ {
   margin: 0;
   padding: 0;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 ul {
@@ -44,6 +46,9 @@ a {
 
 aside {
   border: 1px solid blue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   color: #fff;
   background: #222;
   width: 15%;
@@ -53,7 +58,6 @@ aside {
 
 
 .logo {
-  border: 1px solid hotpink;
   text-align: center;
   height: 50px;
   display: flex;
@@ -103,11 +107,8 @@ aside li {
 }
 
 aside a {
-  /* border: 1px solid orange; */
-  /* margin-bottom: 10px; */
   display: block;
   padding: 0 2em 0 1em;
-  /* line-height: 50px; */
 }
 
 /* .category-container, */
@@ -129,6 +130,8 @@ aside .category-container   {
 main {
   width: 85%;
   position: relative;
+  max-width: calc(100% - 15%);
+  margin-left: 15%;
 }
 
 header {
@@ -149,6 +152,8 @@ header {
 
 .main-container {
   /* border: 1px solid blue; */
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .rightbox img {
@@ -171,7 +176,6 @@ header {
 }
 
 .leftbox input  {
-  /* border: 1px solid #ccc; */
   width: 70%;
   border-radius: 2px;
   height: 35px;
@@ -190,10 +194,22 @@ input  {
 .books-container {
   display: flex;
   flex-wrap: wrap;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+.books-title  {
+  /* padding: 10px; */
+  /* border: 1px solid blue; */
+  border-bottom: 1px solid #ccc;
+}
+
+.books-title h1   {
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 .single-book {
-  /* border: 1px solid red; */
   width: 20%;
   display: flex;
   flex-direction: column;
@@ -201,6 +217,20 @@ input  {
   height: 300px;
   padding: 10px;
   flex-basis: content;
+}
+
+.single-book h3   {
+  /* border: 1px solid blue; */
+  padding: 5px 0px;
+  font-size: .9em;
+}
+
+.single-book span p  {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
+  color: #666666;
+  font-size: .88em;
 }
 
 .img-container {

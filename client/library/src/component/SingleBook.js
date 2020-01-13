@@ -7,7 +7,7 @@ export default function SingleBook({image, title, author}) {
             <img src={image} alt="book paperback" className = 'img-fluid'/>
         </div>
             <h3>{title}</h3>
-            <p>{author}</p>
+            <span><p>{author}</p></span>
         </div>
     )
 }
