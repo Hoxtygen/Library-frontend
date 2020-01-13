@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 export default function SingleCategory({category}) {
     return (
-        <div className = "single-category">
-            <a href="/" className="category-name">{category}</a>
-        </div>
+        <Fragment>
+            <a href="/" className="category-name single-category">{category}</a>
+        </Fragment>
     )
 }

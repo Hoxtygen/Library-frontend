@@ -45,7 +45,7 @@ a {
 }
 
 aside {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   position: fixed;
   top: 0;
   bottom: 0;
@@ -54,6 +54,7 @@ aside {
   width: 15%;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid #ccc;
 }
 
 
@@ -63,6 +64,7 @@ aside {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* border-bottom: 1px solid #eee; */
 }
 
 .logo h1 {
@@ -70,7 +72,6 @@ aside {
 }
 
 aside .sidebar-content {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -111,7 +112,6 @@ aside a {
   padding: 0 2em 0 1em;
 }
 
-/* .category-container, */
 .fav-authors
  {
   padding-top: 30px;
@@ -119,13 +119,23 @@ aside a {
   text-align: center;
 }
 
-/* aside .fav-authors  {
-  border: 1px solid magenta;
+.fav-authors h3, .category-container h3  {
+  padding: 10px 0px;
+  text-transform: uppercase;
+
+}
+
+.fav-authors a, .category-container a  {
+  display: block;
+  padding: 8px 0;
+  color: #ccc;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 aside .category-container   {
-  border: 1px solid green;
-} */
+  padding-bottom: 30px;
+} 
 
 main {
   width: 85%;
