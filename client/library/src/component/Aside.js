@@ -1,15 +1,21 @@
 import React from "react";
 import Categories from "../container/Categories";
+import { Link } from "react-router-dom";
+import Authors from "../container/Authors";
 
 export default function Aside() {
   return (
     <aside>
       <div className="logo">
-        <h1>Bookr</h1>
+        <h1>
+          <Link to="/">Bookr</Link>
+        </h1>
       </div>
       <div className="sidebar-content">
         <div className="btn-container">
-          <button type="button">Add book</button>
+          <button type="button">
+            <Link to="/new-book">Add book</Link>
+          </button>
         </div>
         <div className="fav-authors">
           <h3 className="fav-title">Favourite Authors</h3>
