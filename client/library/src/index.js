@@ -9,10 +9,12 @@ import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import { Provider } from "react-redux";
 import { booksReducer } from './reducers/booksReducer';
 import { categoriesReducer } from './reducers/categoriesReducer'
+import { authorsReducer } from "./reducers/authorsReducer";
 
 const combinedReducer = combineReducers({
   booksReducer,
-  categoriesReducer
+  categoriesReducer,
+  authorsReducer
 });
 
 const store = createStore(
