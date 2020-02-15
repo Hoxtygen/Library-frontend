@@ -33,6 +33,17 @@ h6
   font-family: "Libre Franklin", sans-serif;
 }
 
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -41,7 +52,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(196, 109, 109);
 }
 
 aside {
@@ -55,6 +66,7 @@ aside {
   display: flex;
   flex-direction: column;
   border-right: 1px solid #ccc;
+  min-height: 100vh;
 }
 
 
@@ -142,6 +154,7 @@ main {
   position: relative;
   max-width: calc(100% - 15%);
   margin-left: 15%;
+  min-height: 100vh;
 }
 
 header {
@@ -258,4 +271,37 @@ img {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+/* Form */
+
+.form-container   {
+  border: 1px solid red;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+}
+
+.form-container form  {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.form-container .form-header  {
+  border: 1px solid magenta;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+	width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
